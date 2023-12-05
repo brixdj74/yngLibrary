@@ -1,0 +1,7 @@
+{
+  "name": "newtoncalculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
