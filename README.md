@@ -1,2 +1,3 @@
 # yngLibrary
- // a project of responsive library system by YNG (brix)
+ // a project of responsive library system by YNG.
+ Includes sending email function, auto date (date now and expiry date of borrowed book), inventory system of books, functional printing of reports, ETC...
