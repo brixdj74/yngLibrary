@@ -1,0 +1,1 @@
+select * from borrow inner join student on borrow.getStudent = student.studentId inner join book on borrow.getBook = book.bookId

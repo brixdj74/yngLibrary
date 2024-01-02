@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75699bbc-7878-4f15-a6b4-2926d4a03b5e">
+	<property name="ireport.zoom" value="2.420000000000025"/>
+	<property name="ireport.x" value="199"/>
+	<property name="ireport.y" value="138"/>
+	<parameter name="repType" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dateFrom" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dateTo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from borrow inner join student on borrow.getStudent = student.studentId inner join book on borrow.getBook = book.bookId]]>
+	</queryString>
+	<field name="borrowId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="getStudent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="borrowerName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="borrowerEmail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="getBook" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateBorrowed" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateDue" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateReturned" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="borrowStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ln" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="add" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="em" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bd" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cy" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookAuthor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookCategory" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookSeries" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookShelf" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="activeBorrow" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bookKeeper" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="72" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="70" height="70" uuid="d53fca90-6b0e-4322-b098-f92e957389f8"/>
+				<imageExpression><![CDATA["C:\\Users\\brixd\\OneDrive\\Documents\\NetBeansProjects\\SET_Library\\src\\img\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="70" y="0" width="485" height="30" uuid="b17efb96-445f-490b-86c5-f332c69b66d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[St. Elizabeth Global Skills Institute Inc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="30" width="485" height="20" uuid="083d0718-9b17-415b-8910-7ddb4b62cfb9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Km. 131 Maharlika Highway, Esguerra Dist., Talavera, Nueva Ecija]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="50" width="485" height="20" uuid="ef8ab2db-3404-4043-89b3-93463fd08b26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[(044)-334-1005 / st.elizabethtalavera@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="550" height="1" uuid="d364819d-0e85-43a6-ba00-ad558723835a"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="cba8c166-d9c7-4f41-959b-c9f053dfb4e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[SET Library System - Generated Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="37" height="20" uuid="883465ec-224b-4f13-ae18-c7a48982bae5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TYPE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="37" height="20" uuid="13884bf7-7cdd-4df9-b0b2-731dd22da72d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[DATE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="68" width="51" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="36a64fae-7422-4319-ba87-96ed4e808b90"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="51" y="68" width="57" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="5c3061d4-4398-4206-88a0-04ce0de37663"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrower ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="108" y="68" width="105" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="f3734ae1-38f6-4d2e-85ee-59c97b6cff79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrower Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="213" y="68" width="105" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="217877ab-c7ae-422f-86c1-fc817ce47a67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="68" width="90" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="7de60a83-1cbb-4e3a-9395-583ce5e596d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Borrow Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="408" y="68" width="90" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="cd3bef7e-3260-4cdf-a2f0-a203a929006a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="498" y="68" width="57" height="18" forecolor="#FFFFFF" backcolor="#3333FF" uuid="fd7de196-c69b-4c46-9ab7-b71e1116b25c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="37" y="20" width="150" height="20" uuid="c00164e2-6b76-4860-95d0-7e8b98d686a9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{repType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="40" width="99" height="20" uuid="14349f14-b734-4ddf-81e7-d1bbee42b105"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dateFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="40" width="121" height="20" uuid="8b290b02-305f-4eb5-b23c-236100e9cfbe"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dateTo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="136" y="40" width="23" height="20" uuid="f67b2d95-d631-4825-b01f-926aaba66cb1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="51" height="32" uuid="4f4cc3bf-d14c-47a6-b587-9bb5fda9fe49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{borrowId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="57" height="32" uuid="70710c16-6a35-4b6e-b710-f190309444d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{getStudent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="0" width="105" height="32" uuid="bec92ea8-e684-4146-9cf2-7012ac73073d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{borrowerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="0" width="105" height="32" uuid="2ec93db1-84a6-4d49-94b2-a76f33deb8a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="90" height="32" uuid="418df926-4fec-47d4-8620-18150f1f53bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateBorrowed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="0" width="57" height="32" uuid="e8f9da4a-2cb3-449d-8f0a-c05e6a9ad426"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{borrowStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="0" width="90" height="32" uuid="03332bd6-f00c-4e24-ab74-75b16b3281e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Cambria"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateDue}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="31" width="555" height="1" uuid="f685ed38-f56f-4684-a16d-3b090f5e4fff"/>
+			</line>
+			<line>
+				<reportElement x="498" y="0" width="1" height="32" uuid="c652210f-346b-40c8-baec-46de8f7d75dd"/>
+			</line>
+			<line>
+				<reportElement x="408" y="0" width="1" height="32" uuid="978204a8-267f-48a7-a736-bcb7e68b614f"/>
+			</line>
+			<line>
+				<reportElement x="317" y="0" width="1" height="32" uuid="8be8f780-091e-49d8-b481-ef0be51358e2"/>
+			</line>
+			<line>
+				<reportElement x="213" y="0" width="1" height="32" uuid="94aef939-6b42-475c-9c46-a92f8980e7af"/>
+			</line>
+			<line>
+				<reportElement x="108" y="0" width="1" height="32" uuid="2af627cd-ecfa-42e9-9fba-c81ec562f24c"/>
+			</line>
+			<line>
+				<reportElement x="51" y="0" width="1" height="32" uuid="4f8b3939-92cc-4e29-9fe5-027f586ccae2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="32" uuid="75387354-599f-4223-ab17-a234ba63ee59"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="32" uuid="84388f74-b877-4cff-b29a-4538f39d7817"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

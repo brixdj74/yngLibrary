@@ -1,0 +1,1 @@
+select * from borrow inner join book on borrow.getBook = book.bookId where dateBorrowed between $P{dateFrom} and $P{dateTo}
